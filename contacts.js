@@ -3,7 +3,6 @@ const fs = require("fs").promises;
 
 const contactsPath = path.resolve(__dirname, "db/contacts.json");
 
-// let id = 10;
 
 function listContacts() {
   fs.readFile(contactsPath).then((response) => {
@@ -40,7 +39,6 @@ function addContact(name, email, phone) {
       email,
       phone,
     });
-    // id++;
 
     fs.writeFile(contactsPath, JSON.stringify(contacts));
   });
